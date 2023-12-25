@@ -1,0 +1,102 @@
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .container {
+    background-color: #fff;
+    padding: 20px 20px 50px 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 44px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  #quote {
+    font-size: 18px;
+    font-weight: bold;
+    font-size: x-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  #author {
+    font-size: 16px;
+    font-style: italic;
+    margin: 10px;
+    float: right;
+  }
+
+  #btnNewQuote {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;   
+    box-shadow: 0px 10px 4px 1px rgba(53, 192, 11, 0.1); 
+  }
+
+  #btnNewQuote:hover {
+    background-color: #45a049;
+  }
+ 
+  #typeOfQuote{
+    margin: 10px 10px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;   
+    background-color:black;
+  }
+  #typeOfQuote:active    {
+    color: indigo;
+  }
+  #typeOfQuote:hover {
+    background-color:grey;
+  }
+
+  h2 {
+    margin-top: 30px !important;
+  }
+
+  .loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+ }
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#toaster {
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  background-color: #02521b;
+  z-index: 999999;
+  color: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+/* work for width less than 500*/
+@media (max-width: 600px) {
+  #typesOfQuoteContainer {
+    overflow: scroll;
+    max-height: 150px;
+  }
+}

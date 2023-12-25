@@ -1,0 +1,14 @@
+{
+  "name": "Quote Generator",
+  "version": "1.0.0",
+  "main": "dev/main.js",
+  "license": "MIT",
+  "dependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "scripts": {
+    "start:ts": "tsc -w",
+    "start:js": "nodemon build/dev/main.js",
+    "start": "concurrently npm:start:*"
+  }
+}
