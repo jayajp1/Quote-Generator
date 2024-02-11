@@ -10,7 +10,7 @@ let quoteCategoryList: Array<string> = [];
 let quoteCategoryCloneList: Array<string> = [];
 
 // https://github.com/lukePeavey/quotable
-const quoteURL = 'https://api.quotable.io/'; 
+const quoteURL = 'https://api.quotable.io/';
 
 // Call the listOfQuotes function when the page is loaded
 if (typeof window !== 'undefined') {
@@ -106,8 +106,15 @@ function copyToClipBoard() {
         }, 2000); // Hide the toaster after 2 seconds
     });
 }
+/**
+ * Opens a new window to tweet the displayed quote and author on Twitter.
+ */
+function tweetTheQuote() {
+    const twitterURL = `https://twitter.com/intent/tweet?text=${quote.innerText} ${author.innerText}`
+    window.open(twitterURL, "_blank");
+}
 
-// To show and hide theloader.
+// To show and hide the loader.
 function showHideLoader(isShow: boolean) {
     toggleClass(loader, 'loader', isShow);
     toggleClass(mainContainer, 'd-none', isShow);

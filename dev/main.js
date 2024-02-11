@@ -112,7 +112,14 @@ function copyToClipBoard() {
         }, 2000); // Hide the toaster after 2 seconds
     });
 }
-// To show and hide theloader.
+/**
+ * Opens a new window to tweet the displayed quote and author on Twitter.
+ */
+function tweetTheQuote() {
+    const twitterURL = `https://twitter.com/intent/tweet?text=${quote.innerText} ${author.innerText}`;
+    window.open(twitterURL, "_blank");
+}
+// To show and hide the loader.
 function showHideLoader(isShow) {
     toggleClass(loader, 'loader', isShow);
     toggleClass(mainContainer, 'd-none', isShow);

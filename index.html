@@ -35,9 +35,9 @@
                 <div class="div">
                     <i class="fa-solid fa-quote-left mb-4"></i>
                     <span id="quote" name="quote"></span>
-                    <i class="fa-solid fa-quote-right" style="margin-bottom: -10px;"></i>
                 </div>
-                <i class="fa-regular fa-copy float-start btn" style="height: 20px; color: #010101;" onclick="copyToClipBoard()"></i>
+                <i class="fa-regular fa-copy float-start btn" onclick="copyToClipBoard()" id="copyToClipBoard" style="height: 20px; color: #010101;"></i>
+                <i class="fa-regular fa-brands fa-x-twitter float-start btn" id="twitter" onclick="tweetTheQuote()" style="height: 20px; color: #010101;"></i>
                 <div id="author"></div>
             </div>
             <h2> Click/Search any category to generate a quote</h2>
